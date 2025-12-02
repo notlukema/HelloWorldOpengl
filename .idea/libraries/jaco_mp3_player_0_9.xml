@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jaco-mp3-player-0.9">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/jaco-mp3-player-0.9.3" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/jaco-mp3-player-0.9.3" recursive="false" />
+  </library>
+</component>

@@ -4,14 +4,20 @@ import org.lwjgl.stb.STBTTAlignedQuad;
 import org.lwjgl.stb.STBTTBakedChar;
 import org.lwjgl.stb.STBTTFontinfo;
 
+import jaco.mp3.player.MP3Player;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.FloatBuffer;
+
+/* Wav file playing imports
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.FloatBuffer;
 import java.util.Objects;
+ */
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL.createCapabilities;
@@ -161,10 +167,17 @@ public class Main {
         // Loads and plays music
         String musicFile;
         if (HIGH_QUALITY) {
-            musicFile = "funky-town-cut.wav";
+            musicFile = "funky-town-cut.mp3";
         } else {
-            musicFile = "funky-town-low-quality.wav";
+            musicFile = "funky-town-low-quality.mp3";
         }
+
+        // mp3 files are chosen even if it means including another library since their size is just so much smaller than wav files
+        MP3Player audio = new MP3Player(new File("src\\" + musicFile));
+        audio.setRepeat(true);
+        audio.play();
+
+        /* Old code to play .wav files, no extra library needed
         try (AudioInputStream audioInputStream =
                      AudioSystem.getAudioInputStream(
                              new BufferedInputStream(
@@ -176,6 +189,7 @@ public class Main {
             System.err.println("Couldn't load and play sound: " + musicFile);
             e.printStackTrace();
         }
+         */
 
         // Preparing for text rotation
         float rot = 0;
@@ -221,15 +235,14 @@ public class Main {
             glColor4f(1f, 1f, 1f, 1f);
             drawString("Hello World!", 256);
 
-            // Code to render baked font bitmap
-            /*
+            /* Code to render baked font bitmap
             glBegin(GL_QUADS);
             glTexCoord2f(0, 1);glVertex2f(-1, -1);
             glTexCoord2f(1, 1);glVertex2f(1, -1);
             glTexCoord2f(1, 0);glVertex2f(1, 1);
             glTexCoord2f(0, 0);glVertex2f(-1, 1);
             glEnd();
-            */
+             */
 
             // Disable if drawing non-textured objects
             //glDisable(GL_TEXTURE_2D);

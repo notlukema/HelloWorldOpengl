@@ -15,6 +15,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lwjgl-release-3.3.6-custom/lwjgl-stb-natives-windows.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lwjgl-release-3.3.6-custom/lwjgl-glfw-natives-windows.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lwjgl-release-3.3.6-custom/lwjgl-opengl-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jaco-mp3-player-0.9.3/jaco-mp3-player-0.9.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
