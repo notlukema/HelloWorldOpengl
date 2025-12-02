@@ -1,8 +1,9 @@
 # Hello World
-Quick little Java Hello World program but with interesting graphics (using opengl) and some [funky] music  
+Quick little Java Hello World program but with interesting graphics (using opengl) and some [funky] music
 
-Would use mp3 files for much smaller file size but for some reason cannot find any useable minimalist/lightweight mp3 player libraries and this project isn't important enough for me to "waste my time" anymore  
+![Gif of result](./gif/result.gif)
 
-When I have time I will update the project a little bit in order to solve:
-1. The massive file size due to .wav files
-2. Resizing the window
+Will look for an mp3 solution to shrink size when I have time + fix resizing window issue
+
+Link to tutorial presentation I made a while back: https://docs.google.com/presentation/d/1OkqN4vyHSoVXA1J7zMI9b9pnYjIqEJv9os-8umSCkrc/edit?usp=sharing  
+(since this was made for school and on my school account, it will probably be deleted after I graduate)
